@@ -1,0 +1,25 @@
+1. LOAD:it is used to read the data from the file system
+example:r2 = load 'test' using PigStorage(',') as (id,area,city); 
+======================================================================
+2. STORE:it is used to store the output into a file.
+ex:store r2 into '/out';
+
+======================================================================
+3. DUMP:it is used to display the output on the screen.
+ex:dump r2;
+======================================================================
+4. FOREACH:it is used to display a set of columns from a relation.
+ex:X = FOREACH r2 GENERATE id;
+============================================================
+5. FILTER:it is used to selects columns from a relation based on some condition.
+ex:X = FILTER r2 BY id == 1;
+============================================================================
+6. GROUP BY:it groups the data in one or multiple relations.
+ex:a = Group r2 by id;
+==============================================================================
+7. ORDER BY:it sdorts a relation based on one or more fields
+ex:u = ORDER r2 BY id DESC;
+======================================================================
+8. DESCRIBE:it is used to describe the schema of  the created relation.
+Example:describe r2;
+=======================================================================
